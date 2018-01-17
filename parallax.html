@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="css/flexslider.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="css/style.css">
+
+<!--For Resume Lightbox-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css">
+<!--For Resume Lightbox-->
+
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+  font: 400 15px/1.8 "Lato", sans-serif;
+  color: #777;
+}
+
+.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 {
+  position: relative;
+  opacity: 0.65;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width:100%;
+
+}
+.bgimg-1 {
+  background-image: url("wall_walk_back.jpg");
+  min-height: 100%;
+}
+
+.bgimg-2 {
+  background-image: url("lion_wall_back.jpg");
+  min-height: 800px;
+}
+
+.bgimg-3 {
+  background-image: url("tree_road_back.jpg");
+  min-height: 600px;
+}
+
+.bgimg-4 {
+  background-image: url("rock_sit_back.jpg");
+  min-height:600px;
+}
+
+.caption {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+
+.caption span.border {
+  background-color: #111;
+  color: #fff;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 10px;
+}
+
+.icon{
+  height:50px; 
+  margin-top:120px; 
+  margin-left:25px;
+}
+
+.port_icon{
+  height:120px;
+  vertical-align:middle;
+  margin-top: 250px;
+  margin-left:50px;
+  z-index:1;
+}
+
+.port_text{
+  font-size:25px;
+  color: #f7f7f7; 
+  text-align:center;
+  z-index:1;
+}
+
+.icon:hover{
+
+}
+
+h3 {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font: 20px "Lato", sans-serif;
+  color: #111;
+}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1024px) {
+    .bgimg-1, .bgimg-2, .bgimg-3 {
+        background-attachment: scroll;
+    }
+}
+
+.container.gallery-container {
+    background-color: #fff;
+    color: #35373a;
+    min-height: 100vh;
+    padding: 30px 50px;
+}
+
+.gallery-container h1 {
+    text-align: center;
+    margin-top: 50px;
+    font-family: 'Droid Sans', sans-serif;
+    font-weight: bold;
+}
+
+.gallery-container p.page-description {
+    text-align: center;
+    margin: 25px auto;
+    font-size: 18px;
+    color: #999;
+}
+
+.tz-gallery {
+    padding: 40px;
+}
+
+/* Override bootstrap column paddings */
+.tz-gallery .row > div {
+    padding: 2px;
+}
+
+.tz-gallery .lightbox img {
+    width: 100%;
+    border-radius: 0;
+    position: relative;
+}
+
+.tz-gallery .lightbox:before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -13px;
+    margin-left: -13px;
+    opacity: 0;
+    color: #fff;
+    font-size: 26px;
+    font-family: 'Glyphicons Halflings';
+    content: '\e003';
+    pointer-events: none;
+    z-index: 9000;
+    transition: 0.4s;
+}
+
+
+.tz-gallery .lightbox:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background-color: rgba(91, 82, 162, 0.7);
+    content: '';
+    transition: 0.4s;
+}
+
+.tz-gallery .lightbox:hover:after,
+.tz-gallery .lightbox:hover:before {
+    opacity: 1;
+}
+
+.baguetteBox-button {
+    background-color: transparent !important;
+}
+
+@media(max-width: 768px) {
+    body {
+        padding: 0;
+    }
+}
+
+</style>
+</head>
+
+
+<body data-spy="scroll">
+
+<header id="home">
+
+    <div id="main-nav" class="affix">
+
+      <nav class="navbar">
+        <div class="container">
+
+          <div class="navbar-header">
+            <a href="parallax.html" class="navbar-brand">AP</a>
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#ftheme">
+              <span class="sr-only">Toggle</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+
+          <div class="navbar-collapse collapse" id="ftheme">
+
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#home">home</a></li>
+              <li><a href="#about">about</a></li>
+              <li><a href="#resume">resume</a></li>
+              <li><a href="#portfolio">portfolio</a></li>
+              <li><a href="#contact">contact</a></li>
+            </ul>
+
+          </div>
+
+        </div>
+      </nav>
+    </div>
+
+  </header>
+
+<div class="bgimg-1" style="bottom:0px;">
+  <div class="caption">
+    <span class="border">AMANDA POSTOLOWSKI</span>
+  </div>
+  <img style="position:absolute;width:100%;bottom:0px;" src="wall_walk.png">
+</div>
+
+<div id="about" style="z-index:3">
+  <div style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
+    <h3 style="text-align:center;">ABOUT</h3>
+    <p>I am a skilled programmer and designer seeking a challenging and creative position in User Experience/User Interface to utilize my experience. Please enjoy my portfolio and feel free to contact me.</p>
+  </div>
+</div>
+
+<div id="resume" style="z-index:2;">
+  <div class="bgimg-2">
+    <img style="position:absolute;width:100%;bottom:0px" src="lion_wall.png"> 
+    <div class="caption" style="top:0px; margin:20px">
+      <span class="border" style="font-size:25px;color: #f7f7f7; float:left;">RESUME</span>
+    </div>
+    <div class="tz-gallery" style="float:right; position:absolute; bottom:0px; padding-bottom:20px;">
+        <div class="row">
+            <div class="col-sm-6 col-md-4">
+                <a class="lightbox" href="AmandaPostolowskiResume2017.jpg">
+                    <img src="AmandaPostolowskiResume2017.jpg" alt="Bridge">
+                </a>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+<div style="position:relative;z-index:2">
+    <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+
+    </div>
+</div>
+<div id="portfolio" style="margin-top:0px">
+
+  <div class="bgimg-3">
+    <div class="caption" style="top:0px; margin:20px">
+      <span class="border" style="font-size:25px;color: #f7f7f7; float:left">PORTFOLIO</span>
+    </div>
+    <center>
+      <a style="z-index:1" href="IndustryWork.html"><img id="industry" class="port_icon" onmouseover="DisplayText(this.id); PortImagePurple(this.id);" onmouseout="RemoveText(this.id); PortImageBlack(this.id);" src="industry_icon.png"></a>
+      <a style="z-index:1" href="FreelanceDesign.html"><img id="freelance" class="port_icon" onmouseover="DisplayText(this.id); PortImagePurple(this.id);" onmouseout="RemoveText(this.id); PortImageBlack(this.id);" src="freelance_icon.png"></a>
+      <a style="z-index:1" href="ArtAndPhotography.html"><img id="artPhoto" class="port_icon" onmouseover="DisplayText(this.id); PortImagePurple(this.id);" onmouseout="RemoveText(this.id); PortImageBlack(this.id);" src="artPhoto_icon.png"></a>
+    </center>
+    <div class="caption" style="top:auto; bottom:100px">
+      <span id="industryText" class="border port_text" style="display:none">Industry Work</span>
+      <span id="freelanceText" class="border port_text" style="display:none">Freelance Design</span>
+      <span id="artPhotoText" class="border port_text" style="display:none">Art &amp; Photography</span>
+    </div>
+
+    <br/>
+    <img style="position:absolute;bottom:0px;width:100%;z-index:-1" src="tree_road.png">
+  </div>
+</div>
+
+<div style="position:relative;">
+  <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+
+  </div>
+</div>
+
+<div id="contact" style="margin-top:0px">
+  <div class="bgimg-4">
+    <div class="caption" style="top:0px; margin:20px">
+      <span class="border" style="font-size:25px;color: #f7f7f7; float:left">CONTACT</span>
+    </div>
+    <a style="z-index:1" href="mailto:amanda.postolowski@gmail.com">
+      <img id="email_icon" onmouseover="ImagePurple(this.id)" onmouseout="ImageBlack(this.id)" class="icon" src="email_icon.png">
+    </a>
+    <a style="z-index:1" href="https://www.linkedin.com/in/amandapostolowski/">
+      <img id="linkdin_icon" onmouseover="ImagePurple(this.id)" onmouseout="ImageBlack(this.id)" class="icon" src="linkdin_icon.png">
+    </a>
+    <a style="z-index:1" href="AmandaPostolowskiResume2017.pdf" download>
+      <img id="resume_icon" onmouseover="ImagePurple(this.id)" onmouseout="ImageBlack(this.id)" class="icon" src="resume_icon.png">
+    </a><br/>
+    <img style="position:absolute;bottom:0px;width:100%;z-index:-1" src="rock_sit.png">
+  </div>
+</div>
+
+<script type="text/javascript">
+function DisplayText(id){
+  document.getElementById(id+"Text").style.display = "inline";
+}
+
+function RemoveText(id){
+  document.getElementById(id+"Text").style.display = "none";
+}
+
+function ImagePurple(id){
+  console.log("ImagePurple:"+id);
+  console.log(document.getElementById(id).src);
+  document.getElementById(id).src = id + "_purple.png";
+}
+
+function ImageBlack(id){
+  console.log("in ImageBlack");
+  document.getElementById(id).src = id + ".png";
+}
+
+function PortImagePurple(id){
+  console.log("ImagePurple:"+id);
+  console.log(document.getElementById(id).src);
+  document.getElementById(id).src = id + "_icon_purple.png";
+}
+
+function PortImageBlack(id){
+  console.log("in ImageBlack");
+  document.getElementById(id).src = id + "_icon.png";
+}
+
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
+<script>
+    baguetteBox.run('.tz-gallery');
+</script>
+
+</body>
+</html>
